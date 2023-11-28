@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostel Booking</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('http://127.0.0.1:5000/media/8b63eeaa-e738-49c7-96ff-b60bd3c5c963.svg');
+      background-color:brown;
+      margin: 0;
+      padding: 0;
+      background-repeat: no-repeat;
+  }
+  
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 16px; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: border-radius 0.3s, box-shadow 0.6s;
+    }
+      &:hover {
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+      }
+    h2 {
+      color: #333;
+      text-align: center; /* Centering the heading */
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      color: #555;
+    }
+
+    input,
+    select {
+      padding: 12px; /* Increased padding for better aesthetics */
+      margin: 5px 0 15px;
+      border: 2px solid #ccc; /* Thicker border */
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #3498db;
+      color: #fff;
+      padding: 12px 15px; /* Increased padding for better aesthetics */
+      border: none;
+      border-radius: 8px; /* Increased border radius */
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: green;
+    }
+
+    /* Media Queries for responsiveness */
+    @media screen and (max-width: 768px) {
+      .container {
+        max-width: 100%;
+        margin: 20px;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="logo"></div>
+    <h2>Hostel Booking</h2>
+    <form action="" method="post" name="bookingForm">
+      {%csrf_token%}
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" required>
+
+      <label for="checkin">Check-in Date:</label>
+      <input type="date" id="checkin" name="checkin" required>
+
+      <label for="checkout">Check-out Date:</label>
+      <input type="date" id="checkout" name="checkout" required>
+
+      <label for="adults">Adults:</label>
+      <select id="adults" name="adults" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+
+      <label for="children">Children:</label>
+      <select id="children" name="children" required>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+</body>
+
+</html>
+
+
