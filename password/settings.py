@@ -78,18 +78,15 @@ WSGI_APPLICATION = 'password.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_new',
+        'NAME': 'railway',
         'USER': 'root',
-        'PASSWORD': 'kalpit@123',
-        'HOST': '127.0.0.1',   
-        'PORT': '3306',
+        'PASSWORD': 'G3bDGCdaF26f6d6-13353ga425f4bfbe',
+        'HOST':'monorail.proxy.rlwy.net',    
+        'PORT': '15843',
     }
 }
-
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
